@@ -1,9 +1,9 @@
 :root {
-    --primaryText: #fff;
-    --secondaryText: #ff015e;
-    --primary: rgba(156, 39, 176, .60);
-    --secondary: rgba(255, 1, 94, .60); 
-    --buttonHover: rgba(156, 39, 176, .40);
+    --primaryText: #eaf6ff;
+    --secondaryText: #00e0ff;
+    --primary: rgba(0, 89, 179, 0.75);
+    --secondary: rgba(0, 210, 255, 0.75);
+    --buttonHover: rgba(0, 145, 255, 0.55);
     --smallButtonHover: rgba(0, 0, 0, .25);
 }
 
@@ -26,7 +26,7 @@ body {
     min-height: 100%;
     /* The image used for the site background. Try changing skyscape.jpg to stars.jpg. Put a replacement photo in the images folder and, in line 21 below, replace skyscape.jpg with yourbackgroundfilename.jpg */
     /* The linear gradient darkens the image, like putting a sunglasses lens on top of it. If you want to darken the image even more, change 0.1 (both times) to 0.3 or higher */
-    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../images/skyscape.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(../images/960x0.jpg);
     /* Prevents the browser from repeating or "tiling" the background image */
     background-repeat: no-repeat;
     background-position: center;
@@ -44,12 +44,20 @@ body {
 }
 
 h1 {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
     font-size: 1em;
+    font-weight: 700;
+  letter-spacing: 0.5px;
 }
 
 h2 {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
     font-size: 1em;
     margin-bottom: 0;
+    font-weight: 700;
+  letter-spacing: 0.5px;
 }
 
 img {
@@ -85,10 +93,16 @@ img {
 
 .name {
     color: var(--secondaryText);
+     font-weight: 700;
+  text-shadow: 0 0 8px rgba(255, 1, 94, 0.6);
 }
 
 .name strong {
-    background-color: rgba(0, 0, 0, 0.50);
+   background: linear-gradient(90deg, #ff015e, #9c27b0, #ff015e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  animation: glowText 3s linear infinite;
 }
 
 .section-header {
@@ -102,10 +116,18 @@ img {
 .external-link {
     width: 100%;
     min-width: 50%;
-    padding: .5em 1em;
+    padding: 1em;
     text-decoration: none;
-    color: inherit;
+    color: #ffffff;
     text-align: center;
+     background-color: rgba(0, 0, 0, 0.4);
+     border-radius: 12px;
+     backdrop-filter: blur(4px);
+     font-size: 1.1em;
+  line-height: 1.6;
+    font-weight: 600;
+
+
 }
 
 .button, .external-link {
@@ -126,6 +148,8 @@ img {
 
 @media (hover: hover) {
     .button:hover { background-color: var(--buttonHover); }
+ box-shadow: 0 0 15px rgba(0, 200, 255, 0.6);
+
 }
 
 .button.highlight {
@@ -140,6 +164,7 @@ img {
 } 
 
 .intro {
+    color: #e0e0e0;
     margin: 0 auto;
 }
 
@@ -228,4 +253,16 @@ img {
     .slidedown {
         width: 40%;
     }
+}
+
+//added parameters
+.main-text-color,
+.intro,
+.section-header,
+.footer {
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.7);
+}
+
+@keyframes glowText {
+  to { background-position: 200% center; }
 }
