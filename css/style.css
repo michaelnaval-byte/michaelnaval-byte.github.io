@@ -148,9 +148,10 @@ img {
 }
 
 @media (hover: hover) {
-    .button:hover { background-color: var(--buttonHover); }
- box-shadow: 0 0 15px rgba(0, 200, 255, 0.6);
-
+  .button:hover { 
+    background-color: var(--buttonHover);
+    box-shadow: 0 0 15px rgba(0, 200, 255, 0.6);
+  }
 }
 
 .button.highlight {
@@ -174,7 +175,7 @@ img {
 }
 
 .slidedown {
-    margin: 0 auto;
+    margin: 0 auto 1.2em auto;
     padding: 0;
     -webkit-transition: height .4s ease;
     -o-transition: height .4s ease;
@@ -256,12 +257,17 @@ img {
     }
 }
 
-//added parameters
+/*added parameters*/
+
 .main-text-color,
 .intro,
 .section-header,
 .footer {
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.7);
+}
+
+.links-container {
+    margin-bottom: 1.5em;
 }
 
 @keyframes glowText {
