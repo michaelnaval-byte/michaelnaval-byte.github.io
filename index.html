@@ -18,6 +18,28 @@
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
   <link rel="manifest" href="site.webmanifest">
 
+  <!-- Style for youtube video embed-->
+   <style>
+    .embed-container {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 ratio */
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+      border-radius: 12px;
+    }
+
+    .embed-container iframe,
+    .embed-container object,
+    .embed-container embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+
 </head>
 
 <body class="main-text-color">
@@ -52,18 +74,45 @@
         <div class="description">
           <h2>Video Project title Coming Soon!</h2>
           <p>This project will talk about media and storytelling. More details will show soon</p>
-          <a href="#" class="external-link" target="_blank">Watch</a>
+
+
+          <!-- YouTube Embed -->
+          <a href="https://www.youtube.com/watch?v=M3gIozQiHOs" 
+            class="external-link button"
+            target="_blank">
+            Link
+          </a>
         </div>
       </div>
 
-      <div class="button toggle"><i class="fab fa-soundcloud"></i> Podcast</div>
+      <div class="button toggle"><i class="fa-brands fa-soundcloud"></i> Podcast</div>
       <div class="slidedown">
         <div class="description">
           <h2>Doomscrolling and Productivity</h2>
           <p>This podcast is a conversation about how doomscrolling affects our mental focus and motivation.
-             It discusses on the strategies used to solve this issue.
+          It discusses strategies to help solve this issue.
           </p>
-          <a href="https://soundcloud.com/michaeln-707941706/doom-scrolling-and-poductivity" class="external-link" target="_blank">Listen</a>
+
+          <!-- SoundCloud Embed -->
+          <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
+          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2207441923&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+          </iframe>
+
+          <div style="font-size: 10px; color: #cccccc; line-break: anywhere; word-break: normal;
+                overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
+                font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,
+                             Garuda,Verdana,Tahoma,sans-serif; font-weight: 100;">
+          <a href="https://soundcloud.com/michaeln-707941706"
+              title="MichaelN" target="_blank"
+              style="color: #cccccc; text-decoration: none;">
+              MichaelN
+          </a>
+
+          <a href="https://soundcloud.com/michaeln-707941706/doom-scrolling-and-poductivity"
+            title="Doomscrolling and Productivity Podcast" target="_blank"
+            style="color: #cccccc; text-decoration: none;">
+            Doomscrolling and Productivity Podcast
+          </a>
         </div>
       </div>
     </div>
